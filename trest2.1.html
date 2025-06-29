@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heartfelt Moments</title>
+    <meta name="description" content="A collection of heartfelt quotes and moments with a beautiful dark mode and animated background.">
+    <link rel="icon" type="image/png" href="https://static.vecteezy.com/system/resources/previews/000/547/596/original/hearts-icons-vectors-illustrations.jpg">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            position: relative;
+            background-color: #f5f5f500;
+            color: #000000;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            flex-wrap: wrap;
+        flex-direction: column;
+        }
+        /* Always enable dark mode */
+        body {
+            background-color: #1a1a2e;
+            color: #bfb4b4;
+        }
+
+        body.dark {
+            background-color: #1a1a2e;
+            color: #bfb4b4;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./kissing-couple-5120x2880-18344.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.9;
+            z-index: -3;
+            display: flex;
+            background-color: #f5f5f500;
+            color: #000000;
+        }
+
+        body.dark::before {
+            display: flex;
+        }
+
+        header {
+            background-color: #57454524 ;
+            color: #333;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 2em;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 1s ease, color 0.5s ease;
+        flex-direction: column;
+        position: sticky;
+        top: 0;
+        }
+
+        header.dark {
+            background-color: rgba(23, 39, 44, 0.9);
+            color: white;
+            text-shadow: 5px 5px 4px rgb(131, 105, 105);
+        }
+
+        /* Stylish Dark Mode Toggle Switch */
+.theme-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.theme-switch label {
+    margin-left: 12px;
+    font-size: 1.1em;
+    color: #bfb4b4;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.theme-switch input[type="checkbox"] {
+    width: 48px;
+    height: 24px;
+    appearance: none;
+    background: #444;
+    outline: none;
+    border-radius: 24px;
+    position: relative;
+    transition: background 0.4s;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.theme-switch input[type="checkbox"]:checked {
+    background: linear-gradient(90deg, #ffb347 40%, #6a82fb 100%);
+}
+
+.theme-switch input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.4s cubic-bezier(.68,-0.55,.27,1.55), background 0.4s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.theme-switch input[type="checkbox"]:checked::before {
+    transform: translateX(22px) rotate(360deg) scale(1.1);
+    background: #ffe066;
+    box-shadow: 0 2px 12px #ffe06699;
+}
+
+.theme-switch input[type="checkbox"]:active::before {
+    transform: scale(1.2);
+}
+
+.theme-switch input[type="checkbox"]:focus {
+    outline: 2px solid #ffb347;
+}
+
+.theme-switch label {
+    transition: color 0.3s;
+}
+
+body.dark .theme-switch label {
+    color: #ffe066;
+}
+
+        .container {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.299);
+
+        }
+
+        .quote {
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.299);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease;
+            padding: 30px;
+        }
+
+        .quote.dark {
+            background-color: rgba(50, 59, 61, 0.523);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .quote:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .quote-content h2 {
+            margin: 0 0 10px 0;
+            color: #444444;
+            font-family: 'Cursive', sans-serif;
+        }
+
+        .quote-content.dark h2 {
+            color: #0d99b1;
+        }
+
+        .quote-content p {
+            color: #ab2424;
+            font-style: italic;
+        }
+
+        .quote-content.dark p {
+            color: #878e43;
+        }
+
+        .button {
+            background-color: #6b8f92;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #52757b;
+            transform: scale(1.1);
+        }
+
+        .star {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: rgb(230, 0, 255);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(155, 22, 22, 0.8);
+            animation: sparkle 3s infinite ease-in-out;
+            display: none;
+        }
+
+        body.dark .star {
+            display: block;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(0.8);
+                box-shadow: 0 0 5px rgba(231, 9, 9, 0.6);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+                box-shadow: 0 0 15px rgb(101, 198, 101);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Heartfelt Moments</h1>
+        <div class="theme-switch">
+            <input type="checkbox" id="theme-toggle" aria-label="Toggle dark mode">
+            <label for="theme-toggle">Dark Mode</label>
+        </div>
+    </header>
+    <div class="container">
+        <div class="quote">
+            <div class="quote-content">
+                <h2>"It is funny because we laugh on the days we cried and cry on the days we laughed."</h2>
+                <p>- John Greenleaf Whittier</p>
+                <a href="#" class="button">More Quotes</a>
+            </div>
+        </div>
+        <div class="quote">
+            <div class="quote-content">
+                <h2>"Is it harder to live as a hero or die as a villain?"</h2>
+                <p>- Unknown</p>
+                <a href="#" class="button">More Quotes</a>
+            </div>
+        </div>
+        <div class="quote">
+            <div class="quote-content">
+                <h2>"The emotion that can break your heart is sometimes the very one that heals it."</h2>
+                <p>- Nicholas Sparks</p>
+                <a href="#" class="button">More Quotes</a>
+            </div>
+        </div>
+        <div class="quote">
+            <div class="quote-content">
+                <h2>"Some days all we need is a simple 'What if?'"</h2>
+                <p>- Oscar Wilde</p>
+                <a href="#" class="button">More Quotes</a>
+            </div>
+        </div>
+        <div class="quote">
+            <div class="quote-content">
+                <h2>"Sometimes, reaching out and taking someone's hand is the beginning of a journey."</h2>
+                <p>- Vera Nazarian</p>
+                <a href="#" class="button">More Quotes</a>
+            </div>
+        </div>
+        <div class="quote">
+            <div class="quote-content">
+                <h2>"Sometimes, only one person is missing, but the whole world seems depopulated."</h2>
+                <p>- Alphonse de Lamartine</p>
+                <a href="#" class="button">More Quotes</a>
+            </div>
+        </div>
+        <div class="quote">
+            <div class="quote-content">
+                <h2>"For all sad words of tongue and pen, the saddest are these, 'It might have been.'"</h2>
+                <p>- John Greenleaf Whittier</p>
+                <a href="#" class="button">More Quotes</a>
+            </div>
+        </div>
+        <div class="quote">
+            <div class="quote-content">
+                <h2>"There is a sacredness in tears. They are not the mark of weakness, but of power."</h2>
+                <p>- Washington Irving</p>
+                <a href="#" class="button">More Quotes</a>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('change', function() {
+            document.body.classList.toggle('dark', themeToggle.checked);
+            document.querySelector('header').classList.toggle('dark', themeToggle.checked);
+            document.querySelectorAll('.quote').forEach(quote => {
+                quote.classList.toggle('dark', themeToggle.checked);
+            });
+            document.querySelectorAll('.quote-content').forEach(content => {
+                content.classList.toggle('dark', themeToggle.checked);
+            });
+            document.querySelectorAll('.button').forEach(button => {
+                button.classList.toggle('dark', themeToggle.checked);
+            });
+        });
+
+        // Generate random stars
+        const createStars = () => {
+            const starCount = 1000;
+            const body = document.body;
+
+            for (let i = 1; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+
+                // Randomize position and animation delay
+                const x = Math.random() * window.innerWidth;
+                const y = Math.random() * document.body.scrollHeight; // Adjusted for full page height
+                const delay = Math.random() * 2.5;
+                const duration = 1 + Math.random() * 6;
+
+                star.style.left = `${x}px`;
+                star.style.top = `${y}px`;
+                star.style.animationDelay = `${delay}s`;
+                star.style.animationDuration = `${duration}s`;
+
+                body.appendChild(star);
+            }
+        };
+
+        createStars();
+    </script>
+    </border>
+</body>
+</html>
